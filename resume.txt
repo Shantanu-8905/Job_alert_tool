@@ -1,0 +1,53 @@
+# Sample Resume - Replace with Your Own
+# ======================================
+# Save your resume/skills as resume.txt in the project folder
+# The AI will extract skills automatically
+
+## Professional Summary
+
+Senior Machine Learning Engineer with 5+ years of experience building and deploying
+ML systems at scale. Expertise in NLP, deep learning, and MLOps.
+
+## Technical Skills
+
+Programming Languages:
+- Python (expert), SQL, Bash, JavaScript
+
+ML/AI Frameworks:
+- PyTorch, TensorFlow, Keras, scikit-learn, XGBoost
+- Hugging Face Transformers, spaCy, NLTK
+
+Deep Learning:
+- Neural Networks, CNNs, RNNs, LSTMs, Transformers
+- BERT, GPT, LLM fine-tuning, RAG systems
+
+MLOps & Infrastructure:
+- Docker, Kubernetes, AWS (SageMaker, EC2, S3)
+- MLflow, Airflow, CI/CD pipelines
+- Model serving, monitoring, A/B testing
+
+Data Tools:
+- Pandas, NumPy, Spark, Dask
+- PostgreSQL, MongoDB, Redis, Elasticsearch
+
+## Experience
+
+### Senior ML Engineer - Tech Company (2021-Present)
+- Built recommendation system serving 10M+ users
+- Deployed NLP models for text classification
+- Reduced model inference latency by 40%
+
+### ML Engineer - AI Startup (2019-2021)
+- Developed computer vision pipeline for image recognition
+- Implemented real-time fraud detection system
+- Led team of 3 engineers
+
+## Education
+
+M.S. Computer Science - Stanford University
+B.S. Computer Science - UC Berkeley
+
+## Certifications
+
+- AWS Machine Learning Specialty
+- Google Cloud Professional ML Engineer
