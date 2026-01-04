@@ -1,0 +1,15 @@
+# AI/ML Job Alert System v2.0 - Enhanced Edition
+# ================================================
+# Python 3.10+ required
+
+# Web Scraping
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+
+# Environment Variables
+python-dotenv>=1.0.0
+
+# Note: Ollama must be installed separately
+# Install from: https://ollama.com/download
+# Then run: ollama pull llama3
