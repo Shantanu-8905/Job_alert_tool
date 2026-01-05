@@ -1,0 +1,1063 @@
+2025-12-15 00:37:18,077 - INFO - __main__ - ============================================================
+2025-12-15 00:37:18,077 - INFO - __main__ - Starting AI/ML Job Alert System - Enhanced Edition
+2025-12-15 00:37:18,077 - INFO - __main__ - Run time: 2025-12-15 00:37:18
+2025-12-15 00:37:18,077 - INFO - __main__ - ============================================================
+2025-12-15 00:37:18,077 - INFO - storage.local_storage - Storage initialized at: data
+2025-12-15 00:37:18,127 - INFO - llm.job_scorer - Enhanced job scorer initialized with model: llama3
+2025-12-15 00:37:18,128 - INFO - llm.resume_matcher - Loaded resume from resume.txt
+2025-12-15 00:37:18,134 - INFO - llm.resume_matcher - Resume matcher initialized with 40 skills
+2025-12-15 00:37:18,134 - INFO - notifier.emailer - Email notifier initialized for: shantanudesai6965@gmail.com
+2025-12-15 00:37:18,134 - INFO - __main__ - 
+[STEP 1] Scraping job sources...
+2025-12-15 00:37:18,135 - INFO - scrapers - Initialized 12 job scrapers
+2025-12-15 00:37:18,135 - INFO - scrapers - Scraping 12 sources...
+2025-12-15 00:37:18,135 - INFO - scrapers.remoteok -   RemoteOK: Fetching jobs...
+2025-12-15 00:37:19,979 - ERROR - scrapers.remoteok -   RemoteOK: Parse error - Expecting value: line 1 column 1 (char 0)
+2025-12-15 00:37:19,980 - INFO - scrapers -   remoteok: Found 0 jobs
+2025-12-15 00:37:19,980 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'data-science'...
+2025-12-15 00:37:22,639 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'machine-learning'...
+2025-12-15 00:37:24,334 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'artificial-intelligence'...
+2025-12-15 00:37:25,730 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'python'...
+2025-12-15 00:37:27,437 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'data'...
+2025-12-15 00:37:29,539 - INFO - scrapers.jobicy -   Jobicy: Found 29 AI/ML jobs
+2025-12-15 00:37:29,539 - INFO - scrapers -   jobicy: Found 29 jobs
+2025-12-15 00:37:29,540 - INFO - scrapers.arbeitnow -   Arbeitnow: Fetching jobs...
+2025-12-15 00:37:31,292 - ERROR - scrapers.arbeitnow -   Arbeitnow: Parse error - 'int' object is not subscriptable
+2025-12-15 00:37:31,292 - INFO - scrapers -   arbeitnow: Found 0 jobs
+2025-12-15 00:37:31,292 - INFO - scrapers.findwork -   Findwork: Searching 'machine learning'...
+2025-12-15 00:37:33,606 - WARNING - scrapers.base - Findwork: HTTP error for https://findwork.dev/api/jobs/?search=machine+learning&sort_by=relevance: 401 Client Error: Unauthorized for url: https://findwork.dev/api/jobs/?search=machine+learning&sort_by=relevance
+2025-12-15 00:37:33,606 - INFO - scrapers.findwork -   Findwork: Searching 'data scientist'...
+2025-12-15 00:37:35,483 - WARNING - scrapers.base - Findwork: HTTP error for https://findwork.dev/api/jobs/?search=data+scientist&sort_by=relevance: 401 Client Error: Unauthorized for url: https://findwork.dev/api/jobs/?search=data+scientist&sort_by=relevance
+2025-12-15 00:37:35,484 - INFO - scrapers.findwork -   Findwork: Searching 'AI engineer'...
+2025-12-15 00:37:37,229 - WARNING - scrapers.base - Findwork: HTTP error for https://findwork.dev/api/jobs/?search=AI+engineer&sort_by=relevance: 401 Client Error: Unauthorized for url: https://findwork.dev/api/jobs/?search=AI+engineer&sort_by=relevance
+2025-12-15 00:37:37,235 - INFO - scrapers.findwork -   Findwork: Searching 'deep learning'...
+2025-12-15 00:37:47,411 - WARNING - scrapers.base - Findwork: HTTP error for https://findwork.dev/api/jobs/?search=deep+learning&sort_by=relevance: 401 Client Error: Unauthorized for url: https://findwork.dev/api/jobs/?search=deep+learning&sort_by=relevance
+2025-12-15 00:37:47,412 - INFO - scrapers.findwork -   Findwork: Found 0 AI/ML jobs
+2025-12-15 00:37:47,412 - INFO - scrapers -   findwork: Found 0 jobs
+2025-12-15 00:37:47,412 - INFO - scrapers.himalayas -   Himalayas: Fetching jobs...
+2025-12-15 00:37:50,557 - ERROR - scrapers.himalayas -   Himalayas: Parse error - Expecting value: line 1 column 1 (char 0)
+2025-12-15 00:37:50,558 - INFO - scrapers -   himalayas: Found 0 jobs
+2025-12-15 00:37:50,558 - INFO - scrapers.ycombinator -   Y Combinator: Searching 'machine learning'...
+2025-12-15 00:37:54,519 - WARNING - scrapers.base - Y Combinator: HTTP error for https://www.workatastartup.com/api/companies/search: 404 Client Error: Not Found for url: https://www.workatastartup.com/api/companies/search?query=machine+learning&page=1
+2025-12-15 00:37:54,519 - INFO - scrapers.ycombinator -   Y Combinator: Searching 'AI'...
+2025-12-15 00:37:57,251 - WARNING - scrapers.base - Y Combinator: HTTP error for https://www.workatastartup.com/api/companies/search: 404 Client Error: Not Found for url: https://www.workatastartup.com/api/companies/search?query=AI&page=1
+2025-12-15 00:37:57,251 - INFO - scrapers.ycombinator -   Y Combinator: Searching 'data science'...
+2025-12-15 00:38:00,395 - WARNING - scrapers.base - Y Combinator: HTTP error for https://www.workatastartup.com/api/companies/search: 404 Client Error: Not Found for url: https://www.workatastartup.com/api/companies/search?query=data+science&page=1
+2025-12-15 00:38:00,396 - INFO - scrapers.ycombinator -   Y Combinator: Searching 'deep learning'...
+2025-12-15 00:38:03,223 - WARNING - scrapers.base - Y Combinator: HTTP error for https://www.workatastartup.com/api/companies/search: 404 Client Error: Not Found for url: https://www.workatastartup.com/api/companies/search?query=deep+learning&page=1
+2025-12-15 00:38:03,224 - INFO - scrapers.ycombinator -   Y Combinator: Found 0 AI/ML jobs
+2025-12-15 00:38:03,224 - INFO - scrapers -   ycombinator: Found 0 jobs
+2025-12-15 00:38:03,224 - INFO - scrapers.hackernews -   HackerNews: Finding latest Who's Hiring thread...
+2025-12-15 00:38:05,885 - INFO - scrapers.hackernews -   HackerNews: Found thread: Ask HN: Who is hiring? (December 2025)
+2025-12-15 00:38:06,149 - INFO - scrapers.hackernews -   HackerNews: Processing 200 job posts...
+2025-12-15 00:39:09,171 - INFO - scrapers.hackernews -   HackerNews: Found 50 AI/ML jobs
+2025-12-15 00:39:09,171 - INFO - scrapers -   hackernews: Found 50 jobs
+2025-12-15 00:39:09,172 - INFO - scrapers.github -   GitHub: Checking awesome list...
+2025-12-15 00:39:11,177 - INFO - scrapers.github -   GitHub: Found 43 AI/ML jobs
+2025-12-15 00:39:11,177 - INFO - scrapers -   github: Found 43 jobs
+2025-12-15 00:39:11,178 - INFO - scrapers.stackoverflow -   TechJobs: Checking for jobs...
+2025-12-15 00:39:13,247 - INFO - scrapers.stackoverflow -   TechJobs: Found 19 AI/ML jobs
+2025-12-15 00:39:13,248 - INFO - scrapers -   stackoverflow: Found 19 jobs
+2025-12-15 00:39:13,248 - INFO - scrapers.linkedin -   LinkedIn: Searching 'machine learning'...
+2025-12-15 00:39:18,346 - INFO - scrapers.linkedin -   LinkedIn: Searching 'AI engineer'...
+2025-12-15 00:39:23,492 - INFO - scrapers.linkedin -   LinkedIn: Searching 'data scientist'...
+2025-12-15 00:39:29,890 - INFO - scrapers.linkedin -   LinkedIn: Found 50 AI/ML jobs
+2025-12-15 00:39:29,890 - INFO - scrapers -   linkedin: Found 50 jobs
+2025-12-15 00:39:29,891 - INFO - scrapers.indeed -   Indeed: Trying RSS for 'machine+learning+engineer'...
+2025-12-15 00:39:31,974 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/rss?q=machine+learning+engineer&l=Remote: 404 Client Error: Not Found for url: https://www.indeed.com/rss?q=machine+learning+engineer&l=Remote
+2025-12-15 00:39:31,975 - INFO - scrapers.indeed -   Indeed: Trying RSS for 'data+scientist'...
+2025-12-15 00:39:33,885 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/rss?q=data+scientist&l=Remote: 404 Client Error: Not Found for url: https://www.indeed.com/rss?q=data+scientist&l=Remote
+2025-12-15 00:39:33,886 - INFO - scrapers.indeed -   Indeed: Trying RSS for 'AI+engineer'...
+2025-12-15 00:39:36,862 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/rss?q=AI+engineer&l=Remote: 404 Client Error: Not Found for url: https://www.indeed.com/rss?q=AI+engineer&l=Remote
+2025-12-15 00:39:36,863 - INFO - scrapers.indeed -   Indeed: Searching 'machine learning'...
+2025-12-15 00:39:41,607 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/jobs?q=machine+learning&l=Remote&sort=date: 403 Client Error: Forbidden for url: https://www.indeed.com/jobs?q=machine+learning&l=Remote&sort=date
+2025-12-15 00:39:41,608 - INFO - scrapers.indeed -   Indeed: Searching 'AI engineer'...
+2025-12-15 00:39:45,104 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/jobs?q=AI+engineer&l=Remote&sort=date: 403 Client Error: Forbidden for url: https://www.indeed.com/jobs?q=AI+engineer&l=Remote&sort=date
+2025-12-15 00:39:45,104 - INFO - scrapers.indeed -   Indeed: Searching 'data scientist'...
+2025-12-15 00:39:49,815 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/jobs?q=data+scientist&l=Remote&sort=date: 403 Client Error: Forbidden for url: https://www.indeed.com/jobs?q=data+scientist&l=Remote&sort=date
+2025-12-15 00:39:49,815 - INFO - scrapers.indeed -   Indeed: Found 0 AI/ML jobs
+2025-12-15 00:39:49,815 - INFO - scrapers -   indeed: Found 0 jobs
+2025-12-15 00:39:49,816 - INFO - scrapers.builtin -   BuiltIn: Checking remote...
+2025-12-15 00:39:53,625 - INFO - scrapers.builtin -   BuiltIn: Checking machine-learning...
+2025-12-15 00:39:58,432 - INFO - scrapers.builtin -   BuiltIn: Checking data-science...
+2025-12-15 00:40:02,887 - INFO - scrapers.builtin -   BuiltIn: Found 0 AI/ML jobs
+2025-12-15 00:40:02,887 - INFO - scrapers -   builtin: Found 0 jobs
+2025-12-15 00:40:02,887 - INFO - scrapers - Total unique jobs collected: 171
+2025-12-15 00:40:02,887 - INFO - __main__ - Total jobs scraped: 171
+2025-12-15 00:40:02,889 - INFO - __main__ - 
+[STEP 2] Deduplicating jobs...
+2025-12-15 00:40:02,899 - INFO - storage.local_storage - Retrieved 0 existing jobs from index
+2025-12-15 00:40:02,900 - INFO - utils.helpers - Deduplication: 171 -> 171 unique jobs
+2025-12-15 00:40:02,901 - INFO - __main__ - New unique jobs after deduplication: 171
+2025-12-15 00:40:02,901 - INFO - __main__ - 
+[STEP 3] AI Processing (Scoring + Resume Matching)...
+2025-12-15 00:40:02,901 - INFO - __main__ - Processing job 1/171: Senior Staff Engineer &amp;#8211; Python Developer...
+2025-12-15 00:40:17,150 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 00:40:17,150 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:40:17,150 - INFO - __main__ - Processing job 2/171: Software Engineer &amp;#8211; Platform Workflows (...
+2025-12-15 00:40:30,727 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 00:40:30,727 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:40:30,727 - INFO - __main__ - Processing job 3/171: Freelance Mechanical Engineering Expert with Pytho...
+2025-12-15 00:40:35,023 - INFO - __main__ - Processing job 4/171: Senior Software Engineer, Storage (Python)...
+2025-12-15 00:40:47,763 - INFO - __main__ -   → Relevance: 5/10, Match: 6/10, Combined: 5.6/10
+2025-12-15 00:40:47,764 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:40:47,764 - INFO - __main__ - Processing job 5/171: Python Developer...
+2025-12-15 00:41:13,286 - INFO - __main__ -   → Relevance: 6/10, Match: 7/10, Combined: 6.6/10
+2025-12-15 00:41:13,286 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:41:13,286 - INFO - __main__ - Processing job 6/171: Senior Python Engineer...
+2025-12-15 00:41:50,922 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 00:41:50,922 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:41:50,922 - INFO - __main__ - Processing job 7/171: Python Engineer...
+2025-12-15 00:42:08,588 - INFO - __main__ -   → Relevance: 7/10, Match: 10/10, Combined: 8.8/10
+2025-12-15 00:42:08,588 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:42:08,588 - INFO - __main__ - Processing job 8/171: Data Protection &amp;#038; AI Counsel (Netherlands...
+2025-12-15 00:42:30,660 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 00:42:30,661 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:42:30,661 - INFO - __main__ - Processing job 9/171: Lead Data Scientist...
+2025-12-15 00:42:56,460 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:42:56,460 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:42:56,461 - INFO - __main__ - Processing job 10/171: Senior Data Engineer...
+2025-12-15 00:43:18,052 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:43:18,052 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:43:18,053 - INFO - __main__ - Processing job 11/171: FBS Data Engineer-ETL (Informatica)...
+2025-12-15 00:43:32,823 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 00:43:32,823 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:43:32,823 - INFO - __main__ - Processing job 12/171: Senior Data Scientist...
+2025-12-15 00:43:53,184 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 00:43:53,184 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:43:53,184 - INFO - __main__ - Processing job 13/171: Senior Data Engineer...
+2025-12-15 00:44:14,596 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 00:44:14,596 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:44:14,596 - INFO - __main__ - Processing job 14/171: Working Student Data Engineering (m/f/d)...
+2025-12-15 00:44:33,297 - INFO - __main__ -   → Relevance: 5/10, Match: 6/10, Combined: 5.6/10
+2025-12-15 00:44:33,297 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:44:33,297 - INFO - __main__ - Processing job 15/171: Senior Software Engineer (Back-end, Database Postg...
+2025-12-15 00:44:36,740 - INFO - __main__ - Processing job 16/171: Data Architect &amp;#8211; Not an Active Opening, ...
+2025-12-15 00:44:56,771 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 00:44:56,771 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:44:56,771 - INFO - __main__ - Processing job 17/171: Big Data Architect &amp;#8211; Not an Active Openi...
+2025-12-15 00:45:23,686 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 00:45:23,686 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:45:23,686 - INFO - __main__ - Processing job 18/171: Senior Data Scientist...
+2025-12-15 00:45:50,645 - INFO - __main__ -   → Relevance: 8/10, Match: 7/10, Combined: 7.4/10
+2025-12-15 00:45:50,646 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:45:50,646 - INFO - __main__ - Processing job 19/171: Data Migration Specialist (Customer Support)...
+2025-12-15 00:45:53,920 - INFO - __main__ - Processing job 20/171: Senior Backend Engineer &amp;#8211; Data Ingestion...
+2025-12-15 00:46:12,666 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2025-12-15 00:46:12,666 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:46:12,666 - INFO - __main__ - Processing job 21/171: Data Scientist...
+2025-12-15 00:46:32,499 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 00:46:32,499 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:46:32,499 - INFO - __main__ - Processing job 22/171: Data Engineering Analyst Lead/Scientist...
+2025-12-15 00:46:56,483 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:46:56,483 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:46:56,483 - INFO - __main__ - Processing job 23/171: Data Analyst, Office of the CEO...
+2025-12-15 00:47:12,770 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 00:47:12,770 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:47:12,770 - INFO - __main__ - Processing job 24/171: Sr.Backend Cloud Engineer &amp;#8211; Platform Dat...
+2025-12-15 00:47:32,007 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2025-12-15 00:47:32,007 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:47:32,007 - INFO - __main__ - Processing job 25/171: Sr. Data Scientist, GenAI (Remote, ROU)...
+2025-12-15 00:47:45,596 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:47:45,596 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:47:45,596 - INFO - __main__ - Processing job 26/171: Lead Data Scientist...
+2025-12-15 00:48:09,314 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2025-12-15 00:48:09,314 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:48:09,314 - INFO - __main__ - Processing job 27/171: Manager &amp;#8211; Data Center Infrastructure Exp...
+2025-12-15 00:48:13,547 - INFO - __main__ - Processing job 28/171: Senior Data Engineer, Catalog...
+2025-12-15 00:48:34,236 - INFO - __main__ -   → Relevance: 5/10, Match: 5/10, Combined: 5.0/10
+2025-12-15 00:48:34,236 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:48:34,236 - INFO - __main__ - Processing job 29/171: Senior Data Engineer...
+2025-12-15 00:49:02,807 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 00:49:02,807 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:49:02,807 - INFO - __main__ - Processing job 30/171: Staff Fullstack Engineer & AI Product Engineer...
+2025-12-15 00:49:22,266 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 00:49:22,266 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:49:22,266 - INFO - __main__ - Processing job 31/171: Research Engineer &#x2F; MLE &#x2F; Full-stack...
+2025-12-15 00:49:53,263 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 00:49:53,263 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:49:53,263 - INFO - __main__ - Processing job 32/171: Solutions Engineer...
+2025-12-15 00:50:10,849 - INFO - __main__ -   → Relevance: 7/10, Match: 10/10, Combined: 8.8/10
+2025-12-15 00:50:10,850 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:50:10,850 - INFO - __main__ - Processing job 33/171: Full-time...
+2025-12-15 00:50:39,889 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 00:50:39,889 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:50:39,889 - INFO - __main__ - Processing job 34/171: Unknown Position...
+2025-12-15 00:50:44,048 - INFO - __main__ - Processing job 35/171: Multiple Positions...
+2025-12-15 00:50:47,292 - INFO - __main__ - Processing job 36/171: Engineers, EMs, GTM, Former Founders...
+2025-12-15 00:51:06,116 - INFO - __main__ -   → Relevance: 7/10, Match: 5/10, Combined: 5.8/10
+2025-12-15 00:51:06,117 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:51:06,117 - INFO - __main__ - Processing job 37/171: Senior Software Engineer (Product&#x2F;Frontend)...
+2025-12-15 00:51:26,148 - INFO - __main__ -   → Relevance: 6/10, Match: 7/10, Combined: 6.6/10
+2025-12-15 00:51:26,148 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:51:26,148 - INFO - __main__ - Processing job 38/171: Web Scraping Junior Developer...
+2025-12-15 00:51:47,811 - INFO - __main__ -   → Relevance: 6/10, Match: 6/10, Combined: 6.0/10
+2025-12-15 00:51:47,811 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:51:47,811 - INFO - __main__ - Processing job 39/171: https:&#x2F;&#x2F;trunk.io  Marketing Lead (Develo...
+2025-12-15 00:52:08,620 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 00:52:08,620 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:52:08,620 - INFO - __main__ - Processing job 40/171: Senior Software Engineer, Full Stack...
+2025-12-15 00:52:25,388 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 00:52:25,388 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:52:25,388 - INFO - __main__ - Processing job 41/171: Unknown Position...
+2025-12-15 00:52:49,719 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 00:52:49,719 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:52:49,719 - INFO - __main__ - Processing job 42/171: Austin, TX...
+2025-12-15 00:53:07,568 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:53:07,568 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:53:07,568 - INFO - __main__ - Processing job 43/171: Full-time or contract...
+2025-12-15 00:53:25,210 - INFO - __main__ -   → Relevance: 8/10, Match: 7/10, Combined: 7.4/10
+2025-12-15 00:53:25,210 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:53:25,210 - INFO - __main__ - Processing job 44/171: Full-time...
+2025-12-15 00:53:46,622 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 00:53:46,622 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:53:46,622 - INFO - __main__ - Processing job 45/171: PhysicianX...
+2025-12-15 00:54:11,776 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 00:54:11,776 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:54:11,776 - INFO - __main__ - Processing job 46/171: Founding Engineer...
+2025-12-15 00:54:29,793 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2025-12-15 00:54:29,793 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:54:29,793 - INFO - __main__ - Processing job 47/171: Global Remote...
+2025-12-15 00:54:58,620 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:54:58,620 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:54:58,620 - INFO - __main__ - Processing job 48/171: Full time...
+2025-12-15 00:55:20,377 - INFO - __main__ -   → Relevance: 8/10, Match: 7/10, Combined: 7.4/10
+2025-12-15 00:55:20,377 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:55:20,377 - INFO - __main__ - Processing job 49/171: Remote with occasional travel to Seattle, WA...
+2025-12-15 00:55:23,496 - INFO - __main__ - Processing job 50/171: Machine Learning Engineer, Data Engineer...
+2025-12-15 00:55:43,761 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 00:55:43,761 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:55:43,761 - INFO - __main__ - Processing job 51/171: Software Engineer & Senior DevOps Engineer...
+2025-12-15 00:56:03,891 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2025-12-15 00:56:03,891 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:56:03,891 - INFO - __main__ - Processing job 52/171: Remote (US) - East coast timezone preferred...
+2025-12-15 00:56:24,456 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:56:24,456 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:56:24,456 - INFO - __main__ - Processing job 53/171: 100% Remote...
+2025-12-15 00:56:30,702 - INFO - __main__ - Processing job 54/171: Senior MLOps Engineer...
+2025-12-15 00:56:51,557 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 00:56:51,557 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:56:51,557 - INFO - __main__ - Processing job 55/171: Research Engineer, Fullstack Engineer...
+2025-12-15 00:57:12,431 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2025-12-15 00:57:12,431 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:57:12,431 - INFO - __main__ - Processing job 56/171: Product Engineer + Full Stack Engineer...
+2025-12-15 00:57:30,735 - INFO - __main__ -   → Relevance: 6/10, Match: 8/10, Combined: 7.2/10
+2025-12-15 00:57:30,735 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:57:30,735 - INFO - __main__ - Processing job 57/171: Full-Time...
+2025-12-15 00:57:49,735 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:57:49,735 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:57:49,735 - INFO - __main__ - Processing job 58/171: ONSITE...
+2025-12-15 00:57:52,849 - INFO - __main__ - Processing job 59/171: Full-time...
+2025-12-15 00:58:17,275 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2025-12-15 00:58:17,275 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:58:17,275 - INFO - __main__ - Processing job 60/171: Full-time...
+2025-12-15 00:58:36,725 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:58:36,725 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:58:36,725 - INFO - __main__ - Processing job 61/171: Cloud&#x2F;Data Software Engineering...
+2025-12-15 00:59:00,923 - INFO - __main__ -   → Relevance: 7/10, Match: 5/10, Combined: 5.8/10
+2025-12-15 00:59:00,923 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:59:00,923 - INFO - __main__ - Processing job 62/171: Bay Area...
+2025-12-15 00:59:03,794 - INFO - __main__ - Processing job 63/171: Founding Engineer...
+2025-12-15 00:59:28,647 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 00:59:28,647 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:59:28,647 - INFO - __main__ - Processing job 64/171: Remote (US)...
+2025-12-15 00:59:44,200 - INFO - __main__ -   → Relevance: 6/10, Match: 8/10, Combined: 7.2/10
+2025-12-15 00:59:44,200 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 00:59:44,200 - INFO - __main__ - Processing job 65/171: New York City (Optional Remote)...
+2025-12-15 00:59:48,238 - INFO - __main__ - Processing job 66/171: C &#x2F; GPU &#x2F; AI dev workflows...
+2025-12-15 00:59:51,779 - INFO - __main__ - Processing job 67/171: Fullstack Platform Engineer...
+2025-12-15 01:00:12,285 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 01:00:12,285 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:00:12,285 - INFO - __main__ - Processing job 68/171: Senior &#x2F; Principal &#x2F; Staff AI&#x2F;ML En...
+2025-12-15 01:00:28,299 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:00:28,299 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:00:28,299 - INFO - __main__ - Processing job 69/171: Senior System Engineer, Full Stack...
+2025-12-15 01:00:40,741 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 01:00:40,741 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:00:40,741 - INFO - __main__ - Processing job 70/171: Founding Engineer...
+2025-12-15 01:00:59,790 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 01:00:59,790 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:00:59,790 - INFO - __main__ - Processing job 71/171: Senior SRE + Full Stack Engineer...
+2025-12-15 01:01:03,242 - INFO - __main__ - Processing job 72/171: Unknown Position...
+2025-12-15 01:01:21,712 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 01:01:21,712 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:01:21,712 - INFO - __main__ - Processing job 73/171: Senior Backend + Full Stack Engineers...
+2025-12-15 01:01:42,548 - INFO - __main__ -   → Relevance: 6/10, Match: 8/10, Combined: 7.2/10
+2025-12-15 01:01:42,548 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:01:42,548 - INFO - __main__ - Processing job 74/171: Founding Engineer (Python&#x2F;Backend)...
+2025-12-15 01:02:00,965 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2025-12-15 01:02:00,965 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:02:00,965 - INFO - __main__ - Processing job 75/171: Principal SWE...
+2025-12-15 01:02:17,148 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2025-12-15 01:02:17,148 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:02:17,148 - INFO - __main__ - Processing job 76/171: Onsite...
+2025-12-15 01:02:40,494 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 01:02:40,494 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:02:40,494 - INFO - __main__ - Processing job 77/171: Software Developer...
+2025-12-15 01:02:43,738 - INFO - __main__ - Processing job 78/171: https:&#x2F;&#x2F;askdragonfly.com&#x2F;...
+2025-12-15 01:03:03,999 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2025-12-15 01:03:03,999 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:03:03,999 - INFO - __main__ - Processing job 79/171: Senior Full-Stack Engineer...
+2025-12-15 01:03:20,190 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 01:03:20,190 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:03:20,190 - INFO - __main__ - Processing job 80/171: ML/AI Engineer...
+2025-12-15 01:03:47,330 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:03:47,330 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:03:47,330 - INFO - __main__ - Processing job 81/171: ML/AI Engineer...
+2025-12-15 01:04:14,048 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:04:14,048 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:04:14,048 - INFO - __main__ - Processing job 82/171: ML/AI Engineer...
+2025-12-15 01:04:40,797 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:04:40,798 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:04:40,798 - INFO - __main__ - Processing job 83/171: ML/AI Engineer...
+2025-12-15 01:05:11,954 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:05:11,954 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:05:11,954 - INFO - __main__ - Processing job 84/171: ML/AI Engineer...
+2025-12-15 01:05:35,017 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:05:35,017 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:05:35,017 - INFO - __main__ - Processing job 85/171: ML/AI Engineer...
+2025-12-15 01:05:58,609 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:05:58,609 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:05:58,610 - INFO - __main__ - Processing job 86/171: ML/AI Engineer...
+2025-12-15 01:06:22,541 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:06:22,541 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:06:22,542 - INFO - __main__ - Processing job 87/171: ML/AI Engineer...
+2025-12-15 01:06:43,091 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:06:43,091 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:06:43,091 - INFO - __main__ - Processing job 88/171: ML/AI Engineer...
+2025-12-15 01:07:08,612 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:07:08,612 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:07:08,612 - INFO - __main__ - Processing job 89/171: ML/AI Engineer...
+2025-12-15 01:07:30,487 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:07:30,487 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:07:30,487 - INFO - __main__ - Processing job 90/171: ML/AI Engineer...
+2025-12-15 01:08:01,503 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:08:01,503 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:08:01,503 - INFO - __main__ - Processing job 91/171: ML/AI Engineer...
+2025-12-15 01:08:26,213 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:08:26,213 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:08:26,214 - INFO - __main__ - Processing job 92/171: ML/AI Engineer...
+2025-12-15 01:08:45,649 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:08:45,649 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:08:45,650 - INFO - __main__ - Processing job 93/171: ML/AI Engineer...
+2025-12-15 01:09:11,549 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:09:11,549 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:09:11,549 - INFO - __main__ - Processing job 94/171: ML/AI Engineer...
+2025-12-15 01:09:34,554 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:09:34,554 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:09:34,555 - INFO - __main__ - Processing job 95/171: ML/AI Engineer...
+2025-12-15 01:10:03,520 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:10:03,520 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:10:03,520 - INFO - __main__ - Processing job 96/171: ML/AI Engineer...
+2025-12-15 01:10:30,811 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:10:30,811 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:10:30,811 - INFO - __main__ - Processing job 97/171: ML/AI Engineer...
+2025-12-15 01:10:55,445 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:10:55,445 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:10:55,445 - INFO - __main__ - Processing job 98/171: ML/AI Engineer...
+2025-12-15 01:11:23,408 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:11:23,408 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:11:23,408 - INFO - __main__ - Processing job 99/171: ML/AI Engineer...
+2025-12-15 01:11:43,311 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:11:43,312 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:11:43,312 - INFO - __main__ - Processing job 100/171: ML/AI Engineer...
+2025-12-15 01:12:20,443 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:12:20,443 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:12:20,443 - INFO - __main__ - Processing job 101/171: ML/AI Engineer...
+2025-12-15 01:12:45,300 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:12:45,300 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:12:45,300 - INFO - __main__ - Processing job 102/171: ML/AI Engineer...
+2025-12-15 01:13:11,457 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:13:11,457 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:13:11,457 - INFO - __main__ - Processing job 103/171: ML/AI Engineer...
+2025-12-15 01:13:31,347 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:13:31,347 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:13:31,347 - INFO - __main__ - Processing job 104/171: ML/AI Engineer...
+2025-12-15 01:13:54,120 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:13:54,120 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:13:54,120 - INFO - __main__ - Processing job 105/171: ML/AI Engineer...
+2025-12-15 01:14:27,967 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:14:27,967 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:14:27,967 - INFO - __main__ - Processing job 106/171: ML/AI Engineer...
+2025-12-15 01:14:56,063 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:14:56,063 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:14:56,063 - INFO - __main__ - Processing job 107/171: ML/AI Engineer...
+2025-12-15 01:15:24,955 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:15:24,955 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:15:24,955 - INFO - __main__ - Processing job 108/171: ML/AI Engineer...
+2025-12-15 01:15:48,268 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:15:48,268 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:15:48,268 - INFO - __main__ - Processing job 109/171: ML/AI Engineer...
+2025-12-15 01:16:17,981 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:16:17,981 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:16:17,981 - INFO - __main__ - Processing job 110/171: ML/AI Engineer...
+2025-12-15 01:16:38,904 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:16:38,904 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:16:38,904 - INFO - __main__ - Processing job 111/171: ML/AI Engineer...
+2025-12-15 01:17:09,659 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:17:09,660 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:17:09,660 - INFO - __main__ - Processing job 112/171: ML/AI Engineer...
+2025-12-15 01:17:37,894 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:17:37,894 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:17:37,895 - INFO - __main__ - Processing job 113/171: ML/AI Engineer...
+2025-12-15 01:18:02,538 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:18:02,538 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:18:02,538 - INFO - __main__ - Processing job 114/171: ML/AI Engineer...
+2025-12-15 01:18:26,758 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:18:26,758 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:18:26,758 - INFO - __main__ - Processing job 115/171: ML/AI Engineer...
+2025-12-15 01:18:54,817 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:18:54,817 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:18:54,817 - INFO - __main__ - Processing job 116/171: ML/AI Engineer...
+2025-12-15 01:19:10,089 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:19:10,089 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:19:10,090 - INFO - __main__ - Processing job 117/171: ML/AI Engineer...
+2025-12-15 01:19:39,738 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:19:39,739 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:19:39,739 - INFO - __main__ - Processing job 118/171: ML/AI Engineer...
+2025-12-15 01:20:11,527 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:20:11,527 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:20:11,528 - INFO - __main__ - Processing job 119/171: ML/AI Engineer...
+2025-12-15 01:20:45,551 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:20:45,551 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:20:45,551 - INFO - __main__ - Processing job 120/171: ML/AI Engineer...
+2025-12-15 01:21:12,498 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:21:12,498 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:21:12,498 - INFO - __main__ - Processing job 121/171: ML/AI Engineer...
+2025-12-15 01:21:40,204 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:21:40,204 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:21:40,204 - INFO - __main__ - Processing job 122/171: ML/AI Engineer...
+2025-12-15 01:22:04,982 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:22:04,982 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:22:04,982 - INFO - __main__ - Processing job 123/171: Perfect (Stealth Technology Startup): Lead Softwar...
+2025-12-15 01:22:08,479 - INFO - __main__ - Processing job 124/171: Lemon.io: Senior Full-stack Developer...
+2025-12-15 01:22:24,812 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 01:22:24,812 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:22:24,812 - INFO - __main__ - Processing job 125/171: PostHog: Product Engineer - Data Modeling...
+2025-12-15 01:22:49,004 - INFO - __main__ -   → Relevance: 6/10, Match: 5/10, Combined: 5.4/10
+2025-12-15 01:22:49,004 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:22:49,004 - INFO - __main__ - Processing job 126/171: PostHog: AI Product Engineer...
+2025-12-15 01:23:13,536 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 01:23:13,536 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:23:13,537 - INFO - __main__ - Processing job 127/171: comparis.ch: Android Engineer 80-100% (f/m/x)...
+2025-12-15 01:23:17,568 - INFO - __main__ - Processing job 128/171: BaxEnergy: Senior Software Engineer - Renewable En...
+2025-12-15 01:23:35,685 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 01:23:35,685 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:23:35,685 - INFO - __main__ - Processing job 129/171: BaxEnergy: Senior Data Scientist...
+2025-12-15 01:24:00,299 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2025-12-15 01:24:00,300 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:24:00,300 - INFO - __main__ - Processing job 130/171: OnTheGoSystems: Python Developer...
+2025-12-15 01:24:18,805 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2025-12-15 01:24:18,805 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:24:18,806 - INFO - __main__ - Processing job 131/171: Silverfin: Player-Coach Engineering Team Lead...
+2025-12-15 01:24:26,970 - INFO - __main__ - Processing job 132/171: CompanyCam: Senior Software Engineer (React/React ...
+2025-12-15 01:24:29,957 - INFO - __main__ - Processing job 133/171: Bitovi: Applied AI Engineer Consultant...
+2025-12-15 01:24:58,493 - INFO - __main__ -   → Relevance: 7/10, Match: 5/10, Combined: 5.8/10
+2025-12-15 01:24:58,493 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:24:58,493 - INFO - __main__ - Processing job 134/171: Stellar AI: Senior Software Engineer...
+2025-12-15 01:25:25,356 - INFO - __main__ -   → Relevance: 7/10, Match: 10/10, Combined: 8.8/10
+2025-12-15 01:25:25,356 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:25:25,357 - INFO - __main__ - Processing job 135/171: Close: Senior Software Engineer - Backend/Python -...
+2025-12-15 01:25:29,154 - INFO - __main__ - Processing job 136/171: Valory AG: Senior Python Engineer...
+2025-12-15 01:25:32,235 - INFO - __main__ - Processing job 137/171: Weflow: Senior / Principal Software Engineer...
+2025-12-15 01:26:00,095 - INFO - __main__ -   → Relevance: 6/10, Match: 8/10, Combined: 7.2/10
+2025-12-15 01:26:00,095 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:26:00,096 - INFO - __main__ - Processing job 138/171: Proton.ai: Senior Backend Engineer...
+2025-12-15 01:26:18,585 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 01:26:18,585 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:26:18,585 - INFO - __main__ - Processing job 139/171: Silverfin: Experienced Ruby Product Engineer...
+2025-12-15 01:26:22,065 - INFO - __main__ - Processing job 140/171: DynamiCare Health: Full-Stack Engineer...
+2025-12-15 01:26:49,363 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 01:26:49,364 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:26:49,364 - INFO - __main__ - Processing job 141/171: WPForms: WordPress Full-Stack Developer...
+2025-12-15 01:27:02,344 - INFO - __main__ -   → Relevance: 5/10, Match: 5/10, Combined: 5.0/10
+2025-12-15 01:27:02,344 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:27:02,344 - INFO - __main__ - Processing job 142/171: Data Scientist...
+2025-12-15 01:27:29,899 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:27:29,899 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:27:29,899 - INFO - __main__ - Processing job 143/171: ML Software Engineer L4/L5, AI for Member Systems...
+2025-12-15 01:27:55,944 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:27:55,945 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:27:55,945 - INFO - __main__ - Processing job 144/171: Data Scientist - Early Career (USA)...
+2025-12-15 01:28:19,742 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 01:28:19,742 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:28:19,743 - INFO - __main__ - Processing job 145/171: Data Scientist...
+2025-12-15 01:28:38,217 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 01:28:38,217 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:28:38,217 - INFO - __main__ - Processing job 146/171: Machine Learning Engineer...
+2025-12-15 01:29:00,095 - INFO - __main__ -   → Relevance: 9/10, Match: 10/10, Combined: 9.6/10
+2025-12-15 01:29:00,095 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:29:00,097 - INFO - __main__ - Processing job 147/171: Machine Learning/AI...
+2025-12-15 01:29:02,934 - INFO - __main__ - Processing job 148/171: Machine Learning Engineer, Community Notes...
+2025-12-15 01:29:26,398 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:29:26,398 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:29:26,398 - INFO - __main__ - Processing job 149/171: Data Scientist...
+2025-12-15 01:29:41,193 - INFO - __main__ -   → Relevance: 9/10, Match: 7/10, Combined: 7.8/10
+2025-12-15 01:29:41,193 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:29:41,193 - INFO - __main__ - Processing job 150/171: Dataset Curator AI (Remote)...
+2025-12-15 01:30:03,358 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2025-12-15 01:30:03,358 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:30:03,358 - INFO - __main__ - Processing job 151/171: AI Engineer Intern...
+2025-12-15 01:30:29,958 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2025-12-15 01:30:29,958 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:30:29,958 - INFO - __main__ - Processing job 152/171: Machine Learning Engineer...
+2025-12-15 01:30:49,583 - INFO - __main__ -   → Relevance: 9/10, Match: 10/10, Combined: 9.6/10
+2025-12-15 01:30:49,584 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:30:49,584 - INFO - __main__ - Processing job 153/171: AI/ML Engineer, Analyst - AI Labs...
+2025-12-15 01:31:13,096 - INFO - __main__ -   → Relevance: 8/10, Match: 7/10, Combined: 7.4/10
+2025-12-15 01:31:13,096 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:31:13,098 - INFO - __main__ - Processing job 154/171: ML Engineer, AI...
+2025-12-15 01:31:41,157 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2025-12-15 01:31:41,157 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:31:41,157 - INFO - __main__ - Processing job 155/171: AI ML Engineer (7+ Years)...
+2025-12-15 01:31:59,828 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 01:31:59,829 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:31:59,829 - INFO - __main__ - Processing job 156/171: Data Scientist (REMOTE)...
+2025-12-15 01:32:17,679 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2025-12-15 01:32:17,679 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:32:17,679 - INFO - __main__ - Processing job 157/171: Deep Learning Engineer...
+2025-12-15 01:32:31,807 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:32:31,808 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:32:31,808 - INFO - __main__ - Processing job 158/171: Deep Learning Engineer...
+2025-12-15 01:32:54,065 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:32:54,065 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:32:54,065 - INFO - __main__ - Processing job 159/171: Senior Machine Learning Engineer...
+2025-12-15 01:33:21,612 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:33:21,613 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:33:21,613 - INFO - __main__ - Processing job 160/171: Data Scientist / Engineer...
+2025-12-15 01:33:45,751 - INFO - __main__ -   → Relevance: 7/10, Match: 5/10, Combined: 5.8/10
+2025-12-15 01:33:45,752 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:33:45,752 - INFO - __main__ - Processing job 161/171: Machine Learning Engineer - Inference...
+2025-12-15 01:34:19,267 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:34:19,267 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:34:19,267 - INFO - __main__ - Processing job 162/171: Machine Learning Engineer l...
+2025-12-15 01:34:44,396 - INFO - __main__ -   → Relevance: 9/10, Match: 10/10, Combined: 9.6/10
+2025-12-15 01:34:44,397 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:34:44,397 - INFO - __main__ - Processing job 163/171: Machine Learning Engineer II...
+2025-12-15 01:35:05,999 - INFO - __main__ -   → Relevance: 9/10, Match: 10/10, Combined: 9.6/10
+2025-12-15 01:35:05,999 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:35:06,000 - INFO - __main__ - Processing job 164/171: AI Engineer & Researcher - Inference...
+2025-12-15 01:35:29,122 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:35:29,122 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:35:29,122 - INFO - __main__ - Processing job 165/171: Software Engineer, Machine Learning...
+2025-12-15 01:36:00,707 - INFO - __main__ -   → Relevance: 9/10, Match: 10/10, Combined: 9.6/10
+2025-12-15 01:36:00,707 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:36:00,707 - INFO - __main__ - Processing job 166/171: Machine Learning Engineer, Personalization...
+2025-12-15 01:36:20,241 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:36:20,242 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:36:20,242 - INFO - __main__ - Processing job 167/171: Product Engineer - AI Data...
+2025-12-15 01:36:47,234 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2025-12-15 01:36:47,234 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:36:47,234 - INFO - __main__ - Processing job 168/171: AI System Engineer...
+2025-12-15 01:37:12,369 - INFO - __main__ -   → Relevance: 9/10, Match: 5/10, Combined: 6.6/10
+2025-12-15 01:37:12,369 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:37:12,369 - INFO - __main__ - Processing job 169/171: AI/ML Engineer...
+2025-12-15 01:37:33,273 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:37:33,273 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:37:33,273 - INFO - __main__ - Processing job 170/171: Data Scientist, Integrity...
+2025-12-15 01:37:48,898 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2025-12-15 01:37:48,899 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:37:48,899 - INFO - __main__ - Processing job 171/171: Data Scientist – AI & Agentic Applications & Bench...
+2025-12-15 01:38:06,127 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2025-12-15 01:38:06,128 - INFO - __main__ -   → ACCEPTED ✓
+2025-12-15 01:38:06,129 - INFO - __main__ - Jobs passing AI filter: 149/171
+2025-12-15 01:38:06,129 - INFO - __main__ - 
+[STEP 4] Storing qualified jobs...
+2025-12-15 01:38:06,162 - INFO - __main__ - Stored: Machine Learning Engineer... (Score: 9.6)
+2025-12-15 01:38:06,196 - INFO - __main__ - Stored: Machine Learning Engineer... (Score: 9.6)
+2025-12-15 01:38:06,229 - INFO - __main__ - Stored: Machine Learning Engineer l... (Score: 9.6)
+2025-12-15 01:38:06,265 - INFO - __main__ - Stored: Machine Learning Engineer II... (Score: 9.6)
+2025-12-15 01:38:06,300 - INFO - __main__ - Stored: Software Engineer, Machine Learning... (Score: 9.6)
+2025-12-15 01:38:06,334 - INFO - __main__ - Stored: Python Engineer... (Score: 8.8)
+2025-12-15 01:38:06,369 - INFO - __main__ - Stored: Solutions Engineer... (Score: 8.8)
+2025-12-15 01:38:06,405 - INFO - __main__ - Stored: Stellar AI: Senior Software Engineer... (Score: 8.8)
+2025-12-15 01:38:06,443 - INFO - __main__ - Stored: Senior Data Scientist... (Score: 8.4)
+2025-12-15 01:38:06,475 - INFO - __main__ - Stored: Data Scientist... (Score: 8.4)
+2025-12-15 01:38:06,507 - INFO - __main__ - Stored: Full-time... (Score: 8.4)
+2025-12-15 01:38:06,537 - INFO - __main__ - Stored: Machine Learning Engineer, Data Engineer... (Score: 8.4)
+2025-12-15 01:38:06,571 - INFO - __main__ - Stored: Senior MLOps Engineer... (Score: 8.4)
+2025-12-15 01:38:06,604 - INFO - __main__ - Stored: Senior &#x2F; Principal &#x2F; Staff AI&... (Score: 8.4)
+2025-12-15 01:38:06,636 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,668 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,700 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,732 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,762 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,799 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,831 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,866 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,900 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,927 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,963 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:06,998 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,025 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,068 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,095 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,131 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,164 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,196 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,236 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,268 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,296 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,342 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,383 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,415 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,448 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,483 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,520 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,552 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,590 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,629 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,658 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,692 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,726 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 8.4)
+2025-12-15 01:38:07,768 - INFO - __main__ - Stored: Data Scientist... (Score: 8.4)
+2025-12-15 01:38:07,802 - INFO - __main__ - Stored: ML Software Engineer L4/L5, AI for Membe... (Score: 8.4)
+2025-12-15 01:38:07,830 - INFO - __main__ - Stored: Machine Learning Engineer, Community Not... (Score: 8.4)
+2025-12-15 01:38:07,873 - INFO - __main__ - Stored: Deep Learning Engineer... (Score: 8.4)
+2025-12-15 01:38:07,908 - INFO - __main__ - Stored: Deep Learning Engineer... (Score: 8.4)
+2025-12-15 01:38:07,942 - INFO - __main__ - Stored: Senior Machine Learning Engineer... (Score: 8.4)
+2025-12-15 01:38:07,984 - INFO - __main__ - Stored: Machine Learning Engineer - Inference... (Score: 8.4)
+2025-12-15 01:38:08,020 - INFO - __main__ - Stored: AI Engineer & Researcher - Inference... (Score: 8.4)
+2025-12-15 01:38:08,053 - INFO - __main__ - Stored: Machine Learning Engineer, Personalizati... (Score: 8.4)
+2025-12-15 01:38:08,092 - INFO - __main__ - Stored: AI/ML Engineer... (Score: 8.4)
+2025-12-15 01:38:08,126 - INFO - __main__ - Stored: Data Scientist, Integrity... (Score: 8.4)
+2025-12-15 01:38:08,172 - INFO - __main__ - Stored: Lead Data Scientist... (Score: 8.0)
+2025-12-15 01:38:08,207 - INFO - __main__ - Stored: Founding Engineer... (Score: 8.0)
+2025-12-15 01:38:08,246 - INFO - __main__ - Stored: Research Engineer, Fullstack Engineer... (Score: 8.0)
+2025-12-15 01:38:08,275 - INFO - __main__ - Stored: Full-time... (Score: 8.0)
+2025-12-15 01:38:08,319 - INFO - __main__ - Stored: https:&#x2F;&#x2F;askdragonfly.com&#x2F;... (Score: 8.0)
+2025-12-15 01:38:08,357 - INFO - __main__ - Stored: BaxEnergy: Senior Data Scientist... (Score: 8.0)
+2025-12-15 01:38:08,397 - INFO - __main__ - Stored: AI Engineer Intern... (Score: 8.0)
+2025-12-15 01:38:08,428 - INFO - __main__ - Stored: ML Engineer, AI... (Score: 8.0)
+2025-12-15 01:38:08,471 - INFO - __main__ - Stored: Data Scientist – AI & Agentic Applicatio... (Score: 8.0)
+2025-12-15 01:38:08,503 - INFO - __main__ - Stored: Data Scientist... (Score: 7.8)
+2025-12-15 01:38:08,543 - INFO - __main__ - Stored: Lead Data Scientist... (Score: 7.6)
+2025-12-15 01:38:08,584 - INFO - __main__ - Stored: Senior Data Engineer... (Score: 7.6)
+2025-12-15 01:38:08,614 - INFO - __main__ - Stored: Data Engineering Analyst Lead/Scientist... (Score: 7.6)
+2025-12-15 01:38:08,656 - INFO - __main__ - Stored: Sr. Data Scientist, GenAI (Remote, ROU)... (Score: 7.6)
+2025-12-15 01:38:08,695 - INFO - __main__ - Stored: Austin, TX... (Score: 7.6)
+2025-12-15 01:38:08,733 - INFO - __main__ - Stored: Global Remote... (Score: 7.6)
+2025-12-15 01:38:08,772 - INFO - __main__ - Stored: Remote (US) - East coast timezone prefer... (Score: 7.6)
+2025-12-15 01:38:08,811 - INFO - __main__ - Stored: Full-Time... (Score: 7.6)
+2025-12-15 01:38:08,847 - INFO - __main__ - Stored: Full-time... (Score: 7.6)
+2025-12-15 01:38:08,884 - INFO - __main__ - Stored: Founding Engineer... (Score: 7.6)
+2025-12-15 01:38:08,921 - INFO - __main__ - Stored: Unknown Position... (Score: 7.6)
+2025-12-15 01:38:08,955 - INFO - __main__ - Stored: Onsite... (Score: 7.6)
+2025-12-15 01:38:08,992 - INFO - __main__ - Stored: PostHog: AI Product Engineer... (Score: 7.6)
+2025-12-15 01:38:09,033 - INFO - __main__ - Stored: AI ML Engineer (7+ Years)... (Score: 7.6)
+2025-12-15 01:38:09,074 - INFO - __main__ - Stored: Product Engineer - AI Data... (Score: 7.6)
+2025-12-15 01:38:09,117 - INFO - __main__ - Stored: Senior Data Scientist... (Score: 7.4)
+2025-12-15 01:38:09,155 - INFO - __main__ - Stored: Full-time or contract... (Score: 7.4)
+2025-12-15 01:38:09,193 - INFO - __main__ - Stored: Full time... (Score: 7.4)
+2025-12-15 01:38:09,234 - INFO - __main__ - Stored: AI/ML Engineer, Analyst - AI Labs... (Score: 7.4)
+2025-12-15 01:38:09,273 - INFO - __main__ - Stored: Product Engineer + Full Stack Engineer... (Score: 7.2)
+2025-12-15 01:38:09,351 - INFO - __main__ - Stored: Remote (US)... (Score: 7.2)
+2025-12-15 01:38:09,392 - INFO - __main__ - Stored: Senior Backend + Full Stack Engineers... (Score: 7.2)
+2025-12-15 01:38:09,430 - INFO - __main__ - Stored: Weflow: Senior / Principal Software Engi... (Score: 7.2)
+2025-12-15 01:38:09,469 - INFO - __main__ - Stored: Senior Backend Engineer &amp;#8211; Data... (Score: 7.0)
+2025-12-15 01:38:09,507 - INFO - __main__ - Stored: Sr.Backend Cloud Engineer &amp;#8211; Pl... (Score: 7.0)
+2025-12-15 01:38:09,547 - INFO - __main__ - Stored: Software Engineer & Senior DevOps Engine... (Score: 7.0)
+2025-12-15 01:38:09,585 - INFO - __main__ - Stored: Founding Engineer (Python&#x2F;Backend)... (Score: 7.0)
+2025-12-15 01:38:09,622 - INFO - __main__ - Stored: Principal SWE... (Score: 7.0)
+2025-12-15 01:38:09,661 - INFO - __main__ - Stored: OnTheGoSystems: Python Developer... (Score: 7.0)
+2025-12-15 01:38:09,705 - INFO - __main__ - Stored: Senior Staff Engineer &amp;#8211; Python... (Score: 6.8)
+2025-12-15 01:38:09,752 - INFO - __main__ - Stored: Data Architect &amp;#8211; Not an Active... (Score: 6.8)
+2025-12-15 01:38:09,799 - INFO - __main__ - Stored: Staff Fullstack Engineer & AI Product En... (Score: 6.8)
+2025-12-15 01:38:09,847 - INFO - __main__ - Stored: Research Engineer &#x2F; MLE &#x2F; Full... (Score: 6.8)
+2025-12-15 01:38:09,891 - INFO - __main__ - Stored: https:&#x2F;&#x2F;trunk.io  Marketing Le... (Score: 6.8)
+2025-12-15 01:38:09,930 - INFO - __main__ - Stored: Unknown Position... (Score: 6.8)
+2025-12-15 01:38:09,969 - INFO - __main__ - Stored: PhysicianX... (Score: 6.8)
+2025-12-15 01:38:10,014 - INFO - __main__ - Stored: Founding Engineer... (Score: 6.8)
+2025-12-15 01:38:10,054 - INFO - __main__ - Stored: BaxEnergy: Senior Software Engineer - Re... (Score: 6.8)
+2025-12-15 01:38:10,098 - INFO - __main__ - Stored: Proton.ai: Senior Backend Engineer... (Score: 6.8)
+2025-12-15 01:38:10,138 - INFO - __main__ - Stored: DynamiCare Health: Full-Stack Engineer... (Score: 6.8)
+2025-12-15 01:38:10,182 - INFO - __main__ - Stored: Data Scientist... (Score: 6.8)
+2025-12-15 01:38:10,225 - INFO - __main__ - Stored: Data Scientist (REMOTE)... (Score: 6.8)
+2025-12-15 01:38:10,268 - INFO - __main__ - Stored: Python Developer... (Score: 6.6)
+2025-12-15 01:38:10,314 - INFO - __main__ - Stored: Full-time... (Score: 6.6)
+2025-12-15 01:38:10,357 - INFO - __main__ - Stored: Senior Software Engineer (Product&#x2F;F... (Score: 6.6)
+2025-12-15 01:38:10,398 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,441 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,481 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,520 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,562 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,604 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,644 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,686 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,729 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,771 - INFO - __main__ - Stored: ML/AI Engineer... (Score: 6.6)
+2025-12-15 01:38:10,815 - INFO - __main__ - Stored: AI System Engineer... (Score: 6.6)
+2025-12-15 01:38:10,869 - INFO - __main__ - Stored: Software Engineer &amp;#8211; Platform W... (Score: 6.2)
+2025-12-15 01:38:10,923 - INFO - __main__ - Stored: Senior Python Engineer... (Score: 6.2)
+2025-12-15 01:38:10,965 - INFO - __main__ - Stored: Data Protection &amp;#038; AI Counsel (N... (Score: 6.2)
+2025-12-15 01:38:11,006 - INFO - __main__ - Stored: FBS Data Engineer-ETL (Informatica)... (Score: 6.2)
+2025-12-15 01:38:11,048 - INFO - __main__ - Stored: Senior Data Engineer... (Score: 6.2)
+2025-12-15 01:38:11,091 - INFO - __main__ - Stored: Big Data Architect &amp;#8211; Not an Ac... (Score: 6.2)
+2025-12-15 01:38:11,135 - INFO - __main__ - Stored: Data Analyst, Office of the CEO... (Score: 6.2)
+2025-12-15 01:38:11,177 - INFO - __main__ - Stored: Senior Data Engineer... (Score: 6.2)
+2025-12-15 01:38:11,221 - INFO - __main__ - Stored: Senior Software Engineer, Full Stack... (Score: 6.2)
+2025-12-15 01:38:11,264 - INFO - __main__ - Stored: Fullstack Platform Engineer... (Score: 6.2)
+2025-12-15 01:38:11,307 - INFO - __main__ - Stored: Senior System Engineer, Full Stack... (Score: 6.2)
+2025-12-15 01:38:11,351 - INFO - __main__ - Stored: Senior Full-Stack Engineer... (Score: 6.2)
+2025-12-15 01:38:11,397 - INFO - __main__ - Stored: Lemon.io: Senior Full-stack Developer... (Score: 6.2)
+2025-12-15 01:38:11,446 - INFO - __main__ - Stored: Data Scientist - Early Career (USA)... (Score: 6.2)
+2025-12-15 01:38:11,488 - INFO - __main__ - Stored: Dataset Curator AI (Remote)... (Score: 6.2)
+2025-12-15 01:38:11,530 - INFO - __main__ - Stored: Web Scraping Junior Developer... (Score: 6.0)
+2025-12-15 01:38:11,575 - INFO - __main__ - Stored: Engineers, EMs, GTM, Former Founders... (Score: 5.8)
+2025-12-15 01:38:11,617 - INFO - __main__ - Stored: Cloud&#x2F;Data Software Engineering... (Score: 5.8)
+2025-12-15 01:38:11,659 - INFO - __main__ - Stored: Bitovi: Applied AI Engineer Consultant... (Score: 5.8)
+2025-12-15 01:38:11,704 - INFO - __main__ - Stored: Data Scientist / Engineer... (Score: 5.8)
+2025-12-15 01:38:11,746 - INFO - __main__ - Stored: Senior Software Engineer, Storage (Pytho... (Score: 5.6)
+2025-12-15 01:38:11,794 - INFO - __main__ - Stored: Working Student Data Engineering (m/f/d)... (Score: 5.6)
+2025-12-15 01:38:11,848 - INFO - __main__ - Stored: PostHog: Product Engineer - Data Modelin... (Score: 5.4)
+2025-12-15 01:38:11,894 - INFO - __main__ - Stored: Senior Data Engineer, Catalog... (Score: 5.0)
+2025-12-15 01:38:11,940 - INFO - __main__ - Stored: WPForms: WordPress Full-Stack Developer... (Score: 5.0)
+2025-12-15 01:38:11,940 - INFO - __main__ - Successfully stored 149 jobs
+2025-12-15 01:38:11,971 - INFO - __main__ - Data saved to: data\jobs.csv
+2025-12-15 01:38:11,971 - INFO - __main__ - 
+[STEP 5] Sending email notification...
+2025-12-15 01:38:15,814 - INFO - notifier.emailer - Email sent to shantanudesai6965@gmail.com
+2025-12-15 01:38:15,815 - INFO - __main__ - Email notification sent successfully
+2025-12-15 01:38:15,816 - INFO - __main__ - 
+============================================================
+2025-12-15 01:38:15,816 - INFO - __main__ - JOB ALERT RUN COMPLETE
+2025-12-15 01:38:15,816 - INFO - __main__ - ============================================================
+2025-12-15 01:38:15,817 - INFO - __main__ - Total scraped: 171
+2025-12-15 01:38:15,817 - INFO - __main__ - New unique jobs: 171
+2025-12-15 01:38:15,817 - INFO - __main__ - Passed AI filter: 149
+2025-12-15 01:38:15,817 - INFO - __main__ - Stored: 149
+2025-12-15 01:38:15,817 - INFO - __main__ - Total in database: 149
+2025-12-15 01:38:15,818 - INFO - __main__ - ============================================================
+2026-01-04 22:19:35,873 - INFO - __main__ - ============================================================
+2026-01-04 22:19:35,875 - INFO - __main__ - Starting AI/ML Job Alert System - Enhanced Edition
+2026-01-04 22:19:35,875 - INFO - __main__ - Run time: 2026-01-04 22:19:35
+2026-01-04 22:19:35,875 - INFO - __main__ - ============================================================
+2026-01-04 22:19:35,875 - INFO - storage.local_storage - Storage initialized at: data
+2026-01-04 22:19:35,916 - INFO - llm.job_scorer - Enhanced job scorer initialized with model: llama3
+2026-01-04 22:19:35,916 - INFO - llm.resume_matcher - Loaded resume from resume.txt
+2026-01-04 22:19:35,923 - INFO - llm.resume_matcher - Resume matcher initialized with 40 skills
+2026-01-04 22:19:35,923 - INFO - notifier.emailer - Email notifier initialized for: shantanudesai6965@gmail.com
+2026-01-04 22:19:35,923 - INFO - __main__ - 
+[STEP 1] Scraping job sources...
+2026-01-04 22:19:35,923 - INFO - scrapers - Initialized 12 job scrapers
+2026-01-04 22:19:35,923 - INFO - scrapers - Scraping 12 sources...
+2026-01-04 22:19:35,923 - INFO - scrapers.remoteok -   RemoteOK: Fetching jobs...
+2026-01-04 22:19:37,078 - ERROR - scrapers.remoteok -   RemoteOK: Parse error - Expecting value: line 1 column 1 (char 0)
+2026-01-04 22:19:37,078 - INFO - scrapers -   remoteok: Found 0 jobs
+2026-01-04 22:19:37,078 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'data-science'...
+2026-01-04 22:19:38,674 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'machine-learning'...
+2026-01-04 22:19:40,556 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'artificial-intelligence'...
+2026-01-04 22:19:42,271 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'python'...
+2026-01-04 22:20:04,282 - INFO - scrapers.jobicy -   Jobicy: Searching tag 'data'...
+2026-01-04 22:20:06,145 - INFO - scrapers.jobicy -   Jobicy: Found 7 AI/ML jobs
+2026-01-04 22:20:06,145 - INFO - scrapers -   jobicy: Found 7 jobs
+2026-01-04 22:20:06,145 - INFO - scrapers.arbeitnow -   Arbeitnow: Fetching jobs...
+2026-01-04 22:20:08,107 - ERROR - scrapers.arbeitnow -   Arbeitnow: Parse error - 'int' object is not subscriptable
+2026-01-04 22:20:08,107 - INFO - scrapers -   arbeitnow: Found 0 jobs
+2026-01-04 22:20:08,108 - INFO - scrapers.findwork -   Findwork: Searching 'machine learning'...
+2026-01-04 22:20:10,709 - WARNING - scrapers.base - Findwork: HTTP error for https://findwork.dev/api/jobs/?search=machine+learning&sort_by=relevance: 401 Client Error: Unauthorized for url: https://findwork.dev/api/jobs/?search=machine+learning&sort_by=relevance
+2026-01-04 22:20:10,710 - INFO - scrapers.findwork -   Findwork: Searching 'data scientist'...
+2026-01-04 22:20:12,716 - WARNING - scrapers.base - Findwork: HTTP error for https://findwork.dev/api/jobs/?search=data+scientist&sort_by=relevance: 401 Client Error: Unauthorized for url: https://findwork.dev/api/jobs/?search=data+scientist&sort_by=relevance
+2026-01-04 22:20:12,716 - INFO - scrapers.findwork -   Findwork: Searching 'AI engineer'...
+2026-01-04 22:20:14,658 - WARNING - scrapers.base - Findwork: HTTP error for https://findwork.dev/api/jobs/?search=AI+engineer&sort_by=relevance: 401 Client Error: Unauthorized for url: https://findwork.dev/api/jobs/?search=AI+engineer&sort_by=relevance
+2026-01-04 22:20:14,658 - INFO - scrapers.findwork -   Findwork: Searching 'deep learning'...
+2026-01-04 22:20:16,088 - WARNING - scrapers.base - Findwork: HTTP error for https://findwork.dev/api/jobs/?search=deep+learning&sort_by=relevance: 401 Client Error: Unauthorized for url: https://findwork.dev/api/jobs/?search=deep+learning&sort_by=relevance
+2026-01-04 22:20:16,088 - INFO - scrapers.findwork -   Findwork: Found 0 AI/ML jobs
+2026-01-04 22:20:16,089 - INFO - scrapers -   findwork: Found 0 jobs
+2026-01-04 22:20:16,089 - INFO - scrapers.himalayas -   Himalayas: Fetching jobs...
+2026-01-04 22:20:19,346 - ERROR - scrapers.himalayas -   Himalayas: Parse error - Expecting value: line 1 column 1 (char 0)
+2026-01-04 22:20:19,346 - INFO - scrapers -   himalayas: Found 0 jobs
+2026-01-04 22:20:19,346 - INFO - scrapers.ycombinator -   Y Combinator: Searching 'machine learning'...
+2026-01-04 22:20:23,336 - WARNING - scrapers.base - Y Combinator: HTTP error for https://www.workatastartup.com/api/companies/search: 404 Client Error: Not Found for url: https://www.workatastartup.com/api/companies/search?query=machine+learning&page=1
+2026-01-04 22:20:23,337 - INFO - scrapers.ycombinator -   Y Combinator: Searching 'AI'...
+2026-01-04 22:20:25,994 - WARNING - scrapers.base - Y Combinator: HTTP error for https://www.workatastartup.com/api/companies/search: 404 Client Error: Not Found for url: https://www.workatastartup.com/api/companies/search?query=AI&page=1
+2026-01-04 22:20:25,994 - INFO - scrapers.ycombinator -   Y Combinator: Searching 'data science'...
+2026-01-04 22:20:28,628 - WARNING - scrapers.base - Y Combinator: HTTP error for https://www.workatastartup.com/api/companies/search: 404 Client Error: Not Found for url: https://www.workatastartup.com/api/companies/search?query=data+science&page=1
+2026-01-04 22:20:28,628 - INFO - scrapers.ycombinator -   Y Combinator: Searching 'deep learning'...
+2026-01-04 22:20:30,987 - WARNING - scrapers.base - Y Combinator: HTTP error for https://www.workatastartup.com/api/companies/search: 404 Client Error: Not Found for url: https://www.workatastartup.com/api/companies/search?query=deep+learning&page=1
+2026-01-04 22:20:30,987 - INFO - scrapers.ycombinator -   Y Combinator: Found 0 AI/ML jobs
+2026-01-04 22:20:30,987 - INFO - scrapers -   ycombinator: Found 0 jobs
+2026-01-04 22:20:30,987 - INFO - scrapers.hackernews -   HackerNews: Finding latest Who's Hiring thread...
+2026-01-04 22:20:33,958 - INFO - scrapers.hackernews -   HackerNews: Found thread: Ask HN: Who is hiring? (January 2026)
+2026-01-04 22:20:34,240 - INFO - scrapers.hackernews -   HackerNews: Processing 166 job posts...
+2026-01-04 22:21:43,072 - INFO - scrapers.hackernews -   HackerNews: Found 50 AI/ML jobs
+2026-01-04 22:21:43,072 - INFO - scrapers -   hackernews: Found 50 jobs
+2026-01-04 22:21:43,073 - INFO - scrapers.github -   GitHub: Checking awesome list...
+2026-01-04 22:21:45,289 - INFO - scrapers.github -   GitHub: Found 43 AI/ML jobs
+2026-01-04 22:21:45,289 - INFO - scrapers -   github: Found 43 jobs
+2026-01-04 22:21:45,289 - INFO - scrapers.stackoverflow -   TechJobs: Checking for jobs...
+2026-01-04 22:21:47,135 - INFO - scrapers.stackoverflow -   TechJobs: Found 8 AI/ML jobs
+2026-01-04 22:21:47,136 - INFO - scrapers -   stackoverflow: Found 8 jobs
+2026-01-04 22:21:47,136 - INFO - scrapers.linkedin -   LinkedIn: Searching 'machine learning'...
+2026-01-04 22:21:52,181 - INFO - scrapers.linkedin -   LinkedIn: Searching 'AI engineer'...
+2026-01-04 22:21:57,251 - INFO - scrapers.linkedin -   LinkedIn: Searching 'data scientist'...
+2026-01-04 22:22:02,695 - INFO - scrapers.linkedin -   LinkedIn: Found 9 AI/ML jobs
+2026-01-04 22:22:02,695 - INFO - scrapers -   linkedin: Found 9 jobs
+2026-01-04 22:22:02,695 - INFO - scrapers.indeed -   Indeed: Trying RSS for 'machine+learning+engineer'...
+2026-01-04 22:22:04,273 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/rss?q=machine+learning+engineer&l=Remote: 403 Client Error: Forbidden for url: https://www.indeed.com/rss?q=machine+learning+engineer&l=Remote
+2026-01-04 22:22:04,273 - INFO - scrapers.indeed -   Indeed: Trying RSS for 'data+scientist'...
+2026-01-04 22:22:06,092 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/rss?q=data+scientist&l=Remote: 403 Client Error: Forbidden for url: https://www.indeed.com/rss?q=data+scientist&l=Remote
+2026-01-04 22:22:06,093 - INFO - scrapers.indeed -   Indeed: Trying RSS for 'AI+engineer'...
+2026-01-04 22:22:07,366 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/rss?q=AI+engineer&l=Remote: 403 Client Error: Forbidden for url: https://www.indeed.com/rss?q=AI+engineer&l=Remote
+2026-01-04 22:22:07,366 - INFO - scrapers.indeed -   Indeed: Searching 'machine learning'...
+2026-01-04 22:22:10,927 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/jobs?q=machine+learning&l=Remote&sort=date: 403 Client Error: Forbidden for url: https://www.indeed.com/jobs?q=machine+learning&l=Remote&sort=date
+2026-01-04 22:22:10,928 - INFO - scrapers.indeed -   Indeed: Searching 'AI engineer'...
+2026-01-04 22:22:15,901 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/jobs?q=AI+engineer&l=Remote&sort=date: 403 Client Error: Forbidden for url: https://www.indeed.com/jobs?q=AI+engineer&l=Remote&sort=date
+2026-01-04 22:22:15,902 - INFO - scrapers.indeed -   Indeed: Searching 'data scientist'...
+2026-01-04 22:22:20,817 - WARNING - scrapers.base - Indeed: HTTP error for https://www.indeed.com/jobs?q=data+scientist&l=Remote&sort=date: 403 Client Error: Forbidden for url: https://www.indeed.com/jobs?q=data+scientist&l=Remote&sort=date
+2026-01-04 22:22:20,817 - INFO - scrapers.indeed -   Indeed: Found 0 AI/ML jobs
+2026-01-04 22:22:20,817 - INFO - scrapers -   indeed: Found 0 jobs
+2026-01-04 22:22:20,817 - INFO - scrapers.builtin -   BuiltIn: Checking remote...
+2026-01-04 22:22:24,031 - INFO - scrapers.builtin -   BuiltIn: Checking machine-learning...
+2026-01-04 22:22:28,425 - INFO - scrapers.builtin -   BuiltIn: Checking data-science...
+2026-01-04 22:22:32,632 - INFO - scrapers.builtin -   BuiltIn: Found 0 AI/ML jobs
+2026-01-04 22:22:32,632 - INFO - scrapers -   builtin: Found 0 jobs
+2026-01-04 22:22:32,632 - INFO - scrapers - Total unique jobs collected: 115
+2026-01-04 22:22:32,634 - INFO - __main__ - Total jobs scraped: 115
+2026-01-04 22:22:32,634 - INFO - __main__ - 
+[STEP 2] Deduplicating jobs...
+2026-01-04 22:22:32,650 - INFO - storage.local_storage - Retrieved 149 existing jobs from index
+2026-01-04 22:22:32,651 - INFO - utils.helpers - Deduplication: 115 -> 66 unique jobs
+2026-01-04 22:22:32,651 - INFO - __main__ - New unique jobs after deduplication: 66
+2026-01-04 22:22:32,651 - INFO - __main__ - 
+[STEP 3] AI Processing (Scoring + Resume Matching)...
+2026-01-04 22:22:32,652 - INFO - __main__ - Processing job 1/66: Staff Data Engineer...
+2026-01-04 22:22:52,126 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2026-01-04 22:22:52,126 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:22:52,126 - INFO - __main__ - Processing job 2/66: Senior Data Engineer...
+2026-01-04 22:23:18,304 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2026-01-04 22:23:18,305 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:23:18,305 - INFO - __main__ - Processing job 3/66: Senior Data Engineer...
+2026-01-04 22:23:36,828 - INFO - __main__ -   → Relevance: 6/10, Match: 5/10, Combined: 5.4/10
+2026-01-04 22:23:36,828 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:23:36,828 - INFO - __main__ - Processing job 4/66: Sr Data Governance Engineer (AI)...
+2026-01-04 22:23:52,829 - INFO - __main__ -   → Relevance: 6/10, Match: 8/10, Combined: 7.2/10
+2026-01-04 22:23:52,829 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:23:52,829 - INFO - __main__ - Processing job 5/66: Dev Shop...
+2026-01-04 22:24:21,071 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2026-01-04 22:24:21,071 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:24:21,071 - INFO - __main__ - Processing job 6/66: Founding Engineer...
+2026-01-04 22:24:24,109 - INFO - __main__ - Processing job 7/66: Barcelona, Spain...
+2026-01-04 22:24:45,615 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2026-01-04 22:24:45,616 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:24:45,616 - INFO - __main__ - Processing job 8/66: Robotics Engineer, Data Scientist...
+2026-01-04 22:25:08,471 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2026-01-04 22:25:08,471 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:25:08,471 - INFO - __main__ - Processing job 9/66: San Francisco Bay Area (Mountain View, CA)...
+2026-01-04 22:25:26,977 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2026-01-04 22:25:26,977 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:25:26,977 - INFO - __main__ - Processing job 10/66: Full-stack Senior or Staff Engineer...
+2026-01-04 22:25:55,093 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2026-01-04 22:25:55,094 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:25:55,094 - INFO - __main__ - Processing job 11/66: Hybrid (USA) Albuquerque NM, Washington DC (Tysons...
+2026-01-04 22:25:58,487 - INFO - __main__ - Processing job 12/66: Senior Perception Engineers & MLEs...
+2026-01-04 22:26:21,940 - INFO - __main__ -   → Relevance: 8/10, Match: 7/10, Combined: 7.4/10
+2026-01-04 22:26:21,940 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:26:21,940 - INFO - __main__ - Processing job 13/66: Founding Systems Engineer...
+2026-01-04 22:26:41,660 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2026-01-04 22:26:41,660 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:26:41,660 - INFO - __main__ - Processing job 14/66: REMOTE...
+2026-01-04 22:27:04,570 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2026-01-04 22:27:04,571 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:27:04,571 - INFO - __main__ - Processing job 15/66: Multiple US locations (VA, PA, FL, TX, CA, NY)...
+2026-01-04 22:27:07,519 - INFO - __main__ - Processing job 16/66: Unknown Position...
+2026-01-04 22:27:32,716 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2026-01-04 22:27:32,716 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:27:32,716 - INFO - __main__ - Processing job 17/66: Software Engineers (Backend, Frontend)...
+2026-01-04 22:27:52,515 - INFO - __main__ -   → Relevance: 8/10, Match: 7/10, Combined: 7.4/10
+2026-01-04 22:27:52,515 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:27:52,515 - INFO - __main__ - Processing job 18/66: Software Engineer...
+2026-01-04 22:28:11,918 - INFO - __main__ -   → Relevance: 8/10, Match: 10/10, Combined: 9.2/10
+2026-01-04 22:28:11,918 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:28:11,918 - INFO - __main__ - Processing job 19/66: Software Engineers...
+2026-01-04 22:28:34,804 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2026-01-04 22:28:34,804 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:28:34,804 - INFO - __main__ - Processing job 20/66: https:&#x2F;&#x2F;artificialanalysis.ai...
+2026-01-04 22:29:01,549 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2026-01-04 22:29:01,550 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:29:01,550 - INFO - __main__ - Processing job 21/66: Fastest Inference API...
+2026-01-04 22:29:27,836 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2026-01-04 22:29:27,836 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:29:27,836 - INFO - __main__ - Processing job 22/66: Business Development...
+2026-01-04 22:29:30,902 - INFO - __main__ - Processing job 23/66: https:&#x2F;&#x2F;withlantern.com...
+2026-01-04 22:29:53,546 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2026-01-04 22:29:53,546 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:29:53,546 - INFO - __main__ - Processing job 24/66: Founding Engineer...
+2026-01-04 22:30:15,187 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2026-01-04 22:30:15,187 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:30:15,187 - INFO - __main__ - Processing job 25/66: Senior Engineers (Kotlin&#x2F;Java&#x2F;React&#x2F...
+2026-01-04 22:30:36,688 - INFO - __main__ -   → Relevance: 5/10, Match: 4/10, Combined: 4.4/10
+2026-01-04 22:30:36,688 - INFO - __main__ -   → REJECTED (combined score below 5.0)
+2026-01-04 22:30:36,688 - INFO - __main__ - Processing job 26/66: Staff SWE, AI...
+2026-01-04 22:30:59,196 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2026-01-04 22:30:59,196 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:30:59,196 - INFO - __main__ - Processing job 27/66: Senior+ Engineer (Full-Stack)...
+2026-01-04 22:31:17,833 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2026-01-04 22:31:17,833 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:31:17,833 - INFO - __main__ - Processing job 28/66: Senior Software Engineer...
+2026-01-04 22:31:41,066 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2026-01-04 22:31:41,066 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:31:41,066 - INFO - __main__ - Processing job 29/66: Remote (US)...
+2026-01-04 22:31:44,307 - INFO - __main__ - Processing job 30/66: Software Engineers (SRE, data platform, backend, f...
+2026-01-04 22:31:47,477 - INFO - __main__ - Processing job 31/66: Unknown Position...
+2026-01-04 22:32:14,502 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2026-01-04 22:32:14,502 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:32:14,502 - INFO - __main__ - Processing job 32/66: Software Engineers...
+2026-01-04 22:32:37,119 - INFO - __main__ -   → Relevance: 6/10, Match: 7/10, Combined: 6.6/10
+2026-01-04 22:32:37,119 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:32:37,119 - INFO - __main__ - Processing job 33/66: Founding Engineers...
+2026-01-04 22:32:40,825 - INFO - __main__ - Processing job 34/66: Copenhagen, Denmark...
+2026-01-04 22:33:06,926 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2026-01-04 22:33:06,926 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:33:06,926 - INFO - __main__ - Processing job 35/66: NYC...
+2026-01-04 22:33:33,907 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2026-01-04 22:33:33,907 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:33:33,907 - INFO - __main__ - Processing job 36/66: Unknown Position...
+2026-01-04 22:33:55,455 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2026-01-04 22:33:55,455 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:33:55,455 - INFO - __main__ - Processing job 37/66: Mobile Engineers, Devops Engineers and Engineering...
+2026-01-04 22:33:58,418 - INFO - __main__ - Processing job 38/66: Chicago or NYC (preferred), Remote for the right c...
+2026-01-04 22:34:23,052 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2026-01-04 22:34:23,052 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:34:23,052 - INFO - __main__ - Processing job 39/66: Full Stack Software Engineer...
+2026-01-04 22:34:41,222 - INFO - __main__ -   → Relevance: 6/10, Match: 7/10, Combined: 6.6/10
+2026-01-04 22:34:41,222 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:34:41,222 - INFO - __main__ - Processing job 40/66: REMOTE or San Francisco, Los Angeles, Chicago, Bos...
+2026-01-04 22:34:44,360 - INFO - __main__ - Processing job 41/66: Senior&#x2F;Staff Software Engineer - Infrastructu...
+2026-01-04 22:34:59,854 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2026-01-04 22:34:59,856 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:34:59,856 - INFO - __main__ - Processing job 42/66: Full Stack Developer - HIPAA Project...
+2026-01-04 22:35:02,925 - INFO - __main__ - Processing job 43/66: Various...
+2026-01-04 22:35:05,505 - INFO - __main__ - Processing job 44/66: healthcare, sleep, machine learning...
+2026-01-04 22:35:26,593 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2026-01-04 22:35:26,593 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:35:26,593 - INFO - __main__ - Processing job 45/66: Full-stack Software Engineer...
+2026-01-04 22:35:56,455 - INFO - __main__ -   → Relevance: 5/10, Match: 6/10, Combined: 5.6/10
+2026-01-04 22:35:56,455 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:35:56,455 - INFO - __main__ - Processing job 46/66: https:&#x2F;&#x2F;circadia.health...
+2026-01-04 22:36:17,499 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2026-01-04 22:36:17,499 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:36:17,499 - INFO - __main__ - Processing job 47/66: Software Engineer...
+2026-01-04 22:36:48,248 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2026-01-04 22:36:48,248 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:36:48,249 - INFO - __main__ - Processing job 48/66: Full Stack &#x2F; Applied AI Engineer...
+2026-01-04 22:37:14,721 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2026-01-04 22:37:14,722 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:37:14,722 - INFO - __main__ - Processing job 49/66: San Francisco, CA...
+2026-01-04 22:37:36,417 - INFO - __main__ -   → Relevance: 8/10, Match: 5/10, Combined: 6.2/10
+2026-01-04 22:37:36,417 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:37:36,418 - INFO - __main__ - Processing job 50/66: REMOTE (US-Based Preferred)...
+2026-01-04 22:37:57,005 - INFO - __main__ -   → Relevance: 5/10, Match: 8/10, Combined: 6.8/10
+2026-01-04 22:37:57,005 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:37:57,005 - INFO - __main__ - Processing job 51/66: https:&#x2F;&#x2F;getomni.ai...
+2026-01-04 22:38:30,338 - INFO - __main__ -   → Relevance: 7/10, Match: 7/10, Combined: 7.0/10
+2026-01-04 22:38:30,338 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:38:30,338 - INFO - __main__ - Processing job 52/66: Various Roles...
+2026-01-04 22:38:48,777 - INFO - __main__ -   → Relevance: 6/10, Match: 8/10, Combined: 7.2/10
+2026-01-04 22:38:48,777 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:38:48,777 - INFO - __main__ - Processing job 53/66: USA&#x2F;Canada: REMOTE...
+2026-01-04 22:39:18,966 - INFO - __main__ -   → Relevance: 8/10, Match: 8/10, Combined: 8.0/10
+2026-01-04 22:39:18,966 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:39:18,966 - INFO - __main__ - Processing job 54/66: CodeSignal: Software Engineer, Business Experience...
+2026-01-04 22:39:43,026 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2026-01-04 22:39:43,026 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:39:43,027 - INFO - __main__ - Processing job 55/66: MyDataValue: Fully Remote - Founding Full-Stack Se...
+2026-01-04 22:40:15,618 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2026-01-04 22:40:15,618 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:40:15,618 - INFO - __main__ - Processing job 56/66: Preql: Engineering Manager / Lead Engineer...
+2026-01-04 22:40:20,527 - INFO - __main__ - Processing job 57/66: OnTheGoSystems: PHP developer (French or German sp...
+2026-01-04 22:40:29,739 - INFO - __main__ - Processing job 58/66: Zencastr: Senior Fullstack Developer...
+2026-01-04 22:41:04,896 - INFO - __main__ -   → Relevance: 5/10, Match: 7/10, Combined: 6.2/10
+2026-01-04 22:41:04,896 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:41:04,896 - INFO - __main__ - Processing job 59/66: App Sauce: Junior VibeCoder & Mobile App Builder...
+2026-01-04 22:41:25,682 - INFO - __main__ -   → Relevance: 6/10, Match: 7/10, Combined: 6.6/10
+2026-01-04 22:41:25,682 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:41:25,683 - INFO - __main__ - Processing job 60/66: Speechify Inc: Software Engineer, iOS Core Product...
+2026-01-04 22:41:29,285 - INFO - __main__ - Processing job 61/66: AI/ML Scientist/Developer...
+2026-01-04 22:41:50,166 - INFO - __main__ -   → Relevance: 9/10, Match: 8/10, Combined: 8.4/10
+2026-01-04 22:41:50,166 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:41:50,166 - INFO - __main__ - Processing job 62/66: Data Scientist...
+2026-01-04 22:42:12,140 - INFO - __main__ -   → Relevance: 5/10, Match: 5/10, Combined: 5.0/10
+2026-01-04 22:42:12,140 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:42:12,140 - INFO - __main__ - Processing job 63/66: Machine Learning Scientist (L4/5) - Content and St...
+2026-01-04 22:42:46,026 - INFO - __main__ -   → Relevance: 9/10, Match: 10/10, Combined: 9.6/10
+2026-01-04 22:42:46,026 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:42:46,026 - INFO - __main__ - Processing job 64/66: Machine Learning Engineer...
+2026-01-04 22:43:13,624 - INFO - __main__ -   → Relevance: 9/10, Match: 10/10, Combined: 9.6/10
+2026-01-04 22:43:13,624 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:43:13,624 - INFO - __main__ - Processing job 65/66: Data Scientist - Analytics, Trust and Safety...
+2026-01-04 22:43:43,477 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2026-01-04 22:43:43,478 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:43:43,478 - INFO - __main__ - Processing job 66/66: Data Scientist - Trust & Safety...
+2026-01-04 22:44:09,371 - INFO - __main__ -   → Relevance: 7/10, Match: 8/10, Combined: 7.6/10
+2026-01-04 22:44:09,371 - INFO - __main__ -   → ACCEPTED ✓
+2026-01-04 22:44:09,371 - INFO - __main__ - Jobs passing AI filter: 51/66
+2026-01-04 22:44:09,371 - INFO - __main__ - 
+[STEP 4] Storing qualified jobs...
+2026-01-04 22:44:09,401 - INFO - __main__ - Stored: Machine Learning Scientist (L4/5) - Cont... (Score: 9.6)
+2026-01-04 22:44:09,463 - INFO - __main__ - Stored: Machine Learning Engineer... (Score: 9.6)
+2026-01-04 22:44:09,498 - INFO - __main__ - Stored: Software Engineer... (Score: 9.2)
+2026-01-04 22:44:09,537 - INFO - __main__ - Stored: Barcelona, Spain... (Score: 8.4)
+2026-01-04 22:44:09,577 - INFO - __main__ - Stored: Fastest Inference API... (Score: 8.4)
+2026-01-04 22:44:09,616 - INFO - __main__ - Stored: Unknown Position... (Score: 8.4)
+2026-01-04 22:44:09,648 - INFO - __main__ - Stored: AI/ML Scientist/Developer... (Score: 8.4)
+2026-01-04 22:44:09,690 - INFO - __main__ - Stored: San Francisco Bay Area (Mountain View, C... (Score: 8.0)
+2026-01-04 22:44:09,727 - INFO - __main__ - Stored: https:&#x2F;&#x2F;artificialanalysis.ai... (Score: 8.0)
+2026-01-04 22:44:09,762 - INFO - __main__ - Stored: https:&#x2F;&#x2F;withlantern.com... (Score: 8.0)
+2026-01-04 22:44:09,806 - INFO - __main__ - Stored: Copenhagen, Denmark... (Score: 8.0)
+2026-01-04 22:44:09,850 - INFO - __main__ - Stored: NYC... (Score: 8.0)
+2026-01-04 22:44:09,895 - INFO - __main__ - Stored: https:&#x2F;&#x2F;circadia.health... (Score: 8.0)
+2026-01-04 22:44:09,936 - INFO - __main__ - Stored: Full Stack &#x2F; Applied AI Engineer... (Score: 8.0)
+2026-01-04 22:44:09,973 - INFO - __main__ - Stored: USA&#x2F;Canada: REMOTE... (Score: 8.0)
+2026-01-04 22:44:10,017 - INFO - __main__ - Stored: REMOTE... (Score: 7.6)
+2026-01-04 22:44:10,058 - INFO - __main__ - Stored: Founding Engineer... (Score: 7.6)
+2026-01-04 22:44:10,092 - INFO - __main__ - Stored: Staff SWE, AI... (Score: 7.6)
+2026-01-04 22:44:10,139 - INFO - __main__ - Stored: Senior&#x2F;Staff Software Engineer - In... (Score: 7.6)
+2026-01-04 22:44:10,177 - INFO - __main__ - Stored: Data Scientist - Analytics, Trust and Sa... (Score: 7.6)
+2026-01-04 22:44:10,220 - INFO - __main__ - Stored: Data Scientist - Trust & Safety... (Score: 7.6)
+2026-01-04 22:44:10,260 - INFO - __main__ - Stored: Senior Perception Engineers & MLEs... (Score: 7.4)
+2026-01-04 22:44:10,297 - INFO - __main__ - Stored: Software Engineers (Backend, Frontend)... (Score: 7.4)
+2026-01-04 22:44:10,338 - INFO - __main__ - Stored: Sr Data Governance Engineer (AI)... (Score: 7.2)
+2026-01-04 22:44:10,383 - INFO - __main__ - Stored: Various Roles... (Score: 7.2)
+2026-01-04 22:44:10,425 - INFO - __main__ - Stored: Senior Data Engineer... (Score: 7.0)
+2026-01-04 22:44:10,475 - INFO - __main__ - Stored: Robotics Engineer, Data Scientist... (Score: 7.0)
+2026-01-04 22:44:10,521 - INFO - __main__ - Stored: Senior Software Engineer... (Score: 7.0)
+2026-01-04 22:44:10,560 - INFO - __main__ - Stored: Software Engineer... (Score: 7.0)
+2026-01-04 22:44:10,602 - INFO - __main__ - Stored: https:&#x2F;&#x2F;getomni.ai... (Score: 7.0)
+2026-01-04 22:44:10,644 - INFO - __main__ - Stored: Dev Shop... (Score: 6.8)
+2026-01-04 22:44:10,685 - INFO - __main__ - Stored: Full-stack Senior or Staff Engineer... (Score: 6.8)
+2026-01-04 22:44:10,873 - INFO - __main__ - Stored: Founding Systems Engineer... (Score: 6.8)
+2026-01-04 22:44:11,011 - INFO - __main__ - Stored: Unknown Position... (Score: 6.8)
+2026-01-04 22:44:11,048 - INFO - __main__ - Stored: Senior+ Engineer (Full-Stack)... (Score: 6.8)
+2026-01-04 22:44:11,092 - INFO - __main__ - Stored: Chicago or NYC (preferred), Remote for t... (Score: 6.8)
+2026-01-04 22:44:11,130 - INFO - __main__ - Stored: healthcare, sleep, machine learning... (Score: 6.8)
+2026-01-04 22:44:11,171 - INFO - __main__ - Stored: REMOTE (US-Based Preferred)... (Score: 6.8)
+2026-01-04 22:44:11,212 - INFO - __main__ - Stored: Software Engineers... (Score: 6.6)
+2026-01-04 22:44:11,253 - INFO - __main__ - Stored: Full Stack Software Engineer... (Score: 6.6)
+2026-01-04 22:44:11,296 - INFO - __main__ - Stored: App Sauce: Junior VibeCoder & Mobile App... (Score: 6.6)
+2026-01-04 22:44:11,336 - INFO - __main__ - Stored: Staff Data Engineer... (Score: 6.2)
+2026-01-04 22:44:11,388 - INFO - __main__ - Stored: Software Engineers... (Score: 6.2)
+2026-01-04 22:44:11,427 - INFO - __main__ - Stored: Unknown Position... (Score: 6.2)
+2026-01-04 22:44:11,460 - INFO - __main__ - Stored: San Francisco, CA... (Score: 6.2)
+2026-01-04 22:44:11,512 - INFO - __main__ - Stored: CodeSignal: Software Engineer, Business ... (Score: 6.2)
+2026-01-04 22:44:11,553 - INFO - __main__ - Stored: MyDataValue: Fully Remote - Founding Ful... (Score: 6.2)
+2026-01-04 22:44:11,599 - INFO - __main__ - Stored: Zencastr: Senior Fullstack Developer... (Score: 6.2)
+2026-01-04 22:44:11,642 - INFO - __main__ - Stored: Full-stack Software Engineer... (Score: 5.6)
+2026-01-04 22:44:11,682 - INFO - __main__ - Stored: Senior Data Engineer... (Score: 5.4)
+2026-01-04 22:44:11,730 - INFO - __main__ - Stored: Data Scientist... (Score: 5.0)
+2026-01-04 22:44:11,730 - INFO - __main__ - Successfully stored 51 jobs
+2026-01-04 22:44:11,752 - INFO - __main__ - Data saved to: data\jobs.csv
+2026-01-04 22:44:11,756 - INFO - __main__ - 
+[STEP 5] Sending email notification...
+2026-01-04 22:44:15,947 - INFO - notifier.emailer - Email sent to shantanudesai6965@gmail.com
+2026-01-04 22:44:15,947 - INFO - __main__ - Email notification sent successfully
+2026-01-04 22:44:15,947 - INFO - __main__ - 
+============================================================
+2026-01-04 22:44:15,947 - INFO - __main__ - JOB ALERT RUN COMPLETE
+2026-01-04 22:44:15,947 - INFO - __main__ - ============================================================
+2026-01-04 22:44:15,947 - INFO - __main__ - Total scraped: 115
+2026-01-04 22:44:15,947 - INFO - __main__ - New unique jobs: 66
+2026-01-04 22:44:15,947 - INFO - __main__ - Passed AI filter: 51
+2026-01-04 22:44:15,947 - INFO - __main__ - Stored: 51
+2026-01-04 22:44:15,947 - INFO - __main__ - Total in database: 200
+2026-01-04 22:44:15,950 - INFO - __main__ - ============================================================
