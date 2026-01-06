@@ -1,0 +1,30 @@
+# Environment
+.env
+*.env.local
+
+# Data files
+data/
+*.csv
+*.json
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+ENV/
+
+# IDE
+.idea/
+.vscode/
+*.swp
+
+# Logs
+*.log
+
+# OS
+.DS_Store
+Thumbs.db
