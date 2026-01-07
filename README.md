@@ -2,7 +2,7 @@
 
 An advanced, locally-powered job alert system with **resume matching**, **AI scoring**, and **10+ job sources**.
 
-## ✨ New Features in v2.0
+## ✨ New Features 
 
 - **🎯 Resume Matching**: Upload your resume and get personalized match scores
 - **🧠 AI-Powered Scoring**: Local LLM analyzes job relevance (no paid APIs!)
