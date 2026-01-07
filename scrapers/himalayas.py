@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Himalayas Job Scraper
-=====================
-Scrapes AI/ML jobs from Himalayas.app.
-"""
 
 import logging
 from typing import List, Dict, Any

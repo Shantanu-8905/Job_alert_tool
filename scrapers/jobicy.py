@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Jobicy Job Scraper
-==================
-Scrapes AI/ML jobs from Jobicy using their public API.
-"""
 
 import logging
 from typing import List, Dict, Any

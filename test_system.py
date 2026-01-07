@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Test Script for AI/ML Job Alert System v2.0
-===========================================
-Tests all components including resume matching.
-"""
 
 import os
 import sys

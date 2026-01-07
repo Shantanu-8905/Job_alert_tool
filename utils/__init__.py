@@ -1,8 +1,3 @@
-"""
-Utils Module
-============
-Common utility functions and configuration.
-"""
 
 from .helpers import (
     retry_with_backoff,

@@ -1,18 +1,3 @@
-#!/usr/bin/env python3
-"""
-AI/ML Job Alert System - Enhanced Edition
-==========================================
-Features:
-- 10+ Job Sources
-- Resume Matching with AI
-- Advanced Job Scoring
-- Local CSV/JSON Storage
-- Email Notifications
-- Job Analytics
-
-Author: AI Job Alert System
-Version: 2.0
-"""
 
 import os
 import sys

@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Base Job Scraper
-================
-Abstract base class for all job scrapers.
-"""
 
 import time
 import random

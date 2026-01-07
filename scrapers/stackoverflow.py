@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-Stack Overflow Jobs Scraper
-===========================
-Scrapes AI/ML jobs from Stack Overflow alternatives.
-Note: SO Jobs was shut down, using alternative tech job sources.
-"""
 
 import logging
 from typing import List, Dict, Any

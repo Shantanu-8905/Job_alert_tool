@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-Resume Matcher
-==============
-Matches job requirements against user's resume/skills profile.
-Uses AI to extract skills and calculate match scores.
-"""
 
 import os
 import re

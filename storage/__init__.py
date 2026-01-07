@@ -1,8 +1,3 @@
-"""
-Storage Module
-==============
-Local file storage using CSV and JSON.
-"""
 
 from .local_storage import LocalStorageClient
 

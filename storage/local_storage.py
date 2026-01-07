@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Local Storage Client (CSV/JSON)
-================================
-Enhanced storage with support for skills, scores, and analytics.
-"""
 
 import os
 import csv

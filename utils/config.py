@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Configuration Module
-====================
-Centralized configuration management for the job alert system.
-"""
 
 import os
 import json

@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Arbeitnow Job Scraper
-=====================
-Scrapes AI/ML jobs from Arbeitnow using their public API.
-"""
 
 import logging
 from typing import List, Dict, Any

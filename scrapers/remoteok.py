@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-RemoteOK Job Scraper
-====================
-Scrapes AI/ML jobs from RemoteOK using their public JSON API.
-"""
 
 import logging
 from datetime import datetime

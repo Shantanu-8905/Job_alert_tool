@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Utility Helpers
-===============
-Common utility functions for the job alert system.
-"""
 
 import os
 import time

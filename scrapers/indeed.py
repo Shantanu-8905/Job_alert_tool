@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Indeed Job Scraper
-==================
-Scrapes AI/ML jobs from Indeed using multiple strategies.
-"""
 
 import re
 import logging

@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Findwork.dev Job Scraper
-========================
-Scrapes AI/ML jobs from Findwork.dev API.
-"""
 
 import logging
 from typing import List, Dict, Any

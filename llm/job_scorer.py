@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-Enhanced Job Scorer
-===================
-Uses local LLM (Ollama) for advanced job relevance scoring.
-Analyzes job titles, descriptions, and requirements.
-"""
 
 import os
 import re

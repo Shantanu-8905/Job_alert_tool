@@ -1,10 +1,4 @@
-#!/usr/bin/env python3
-"""
-Job Scraper Manager
-===================
-Manages multiple job scrapers and aggregates results.
-Supports 10+ job sources.
-"""
+
 
 import logging
 from typing import List, Dict, Any

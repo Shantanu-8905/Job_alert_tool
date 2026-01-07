@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Y Combinator Job Scraper
-========================
-Scrapes AI/ML jobs from Work at a Startup (Y Combinator).
-"""
 
 import logging
 from typing import List, Dict, Any

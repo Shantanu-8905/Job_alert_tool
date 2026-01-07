@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-GitHub Jobs Scraper
-===================
-Scrapes AI/ML jobs from GitHub Jobs alternatives and repositories.
-Note: GitHub Jobs was deprecated, so we use alternative sources.
-"""
 
 import re
 import logging

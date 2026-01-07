@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-Hacker News Job Scraper
-=======================
-Scrapes AI/ML jobs from Hacker News "Who's Hiring" threads.
-"""
-
 import re
 import logging
 from datetime import datetime

@@ -1,10 +1,3 @@
-#!/usr/bin/env python3
-"""
-LinkedIn Jobs Scraper
-=====================
-Scrapes AI/ML jobs from LinkedIn via RSS/public feeds.
-Note: LinkedIn heavily restricts scraping, so we use alternative methods.
-"""
 
 import re
 import logging

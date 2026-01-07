@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-BuiltIn Job Scraper
-===================
-Scrapes AI/ML jobs from BuiltIn.com (tech job board).
-"""
 
 import re
 import logging

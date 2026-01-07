@@ -1,9 +1,3 @@
-#!/usr/bin/env python3
-"""
-Email Notifier
-==============
-Sends enhanced email notifications with job matches and analytics.
-"""
 
 import os
 import ssl
