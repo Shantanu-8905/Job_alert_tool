@@ -13,6 +13,10 @@ An advanced, locally-powered job alert system with **resume matching**, **AI sco
 
 ## 🚀 Quick Start
 
+## 🎬 Demo Video
+
+[▶ Watch the Demo](https://github.com/Shantanu-8905/Job_alert_tool/blob/main/Working_Video/Job_tool.mp4)
+
 ```bash
 # 1. Install dependencies
 pip install -r requirements.txt
